@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-6  mx-auto">
+        <br>
+        <div class="col-12">
+            <h3 class="text-center">Jokenpo</h3>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <label>Jogador 1:</label>
+                <select class="form-control" id="player1">
+                    <option value="stone">Pedra</option>
+                    <option value="paper">Papel</option>
+                    <option value="scissors">Tesoura</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-12">
+            <br>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <label>Jogador 2:</label>
+                <select class="form-control" id="player2">
+                    <option value="stone">Pedra</option>
+                    <option value="paper">Papel</option>
+                    <option value="scissors">Tesoura</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <button type="button" class="btn btn-primary float-right">Jogar</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="col-12">
+            <div class="col-12">
+                <h5>Placar:</h5>
+                <hr>
+            </div>
+            <div class="col-6">
+                Jogador1 : <span id="score-player1"></span>
+            </div>
+            <div class="col-6">
+                Jogador2 : <span id="score-player2"></span>
+            </div>
+        </div>
+        <br>
+        <div class="winner"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="js/show_winner.js"></script>
+    <script src="js/send_form.js"></script>
+    <script src="js/scoreboard.js"></script>
+</body>
+
+</html>
