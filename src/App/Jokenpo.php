@@ -8,7 +8,6 @@ class Jokenpo implements JokenpoContract
 {
     protected $player1;
     protected $player2;
-    protected $options = ['paper' => 'stone', 'stone' => 'scissors', 'scissors' => 'paper'];
 
     public function __construct($player1, $player2)
     {
@@ -38,17 +37,8 @@ class Jokenpo implements JokenpoContract
 
     protected function checkWinner()
     {
-        foreach ($this->options as $win => $loses) {
+       $game = FactoryGame::create($this->player1);
 
-            if ($this->player1 === $win && $this->player2 === $loses) {
-
-                return 1;
-            }
-
-            if ($this->player2 === $win && $this->player1 === $loses) {
-
-                return 2;
-            }
-        }
+       return $game->win($this->player2);
     }
 }

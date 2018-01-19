@@ -5,8 +5,8 @@ use App\Validation;
 
 require_once '../vendor/autoload.php';
 
-$player1 = isset($_GET['player1']) ? $_GET['player1'] : null;
-$player2 = isset($_GET['player2']) ? $_GET['player2'] : null;
+$player1 = $_GET['player1'] ?? null;
+$player2 = $_GET['player2'] ?? null;
 
 $validation = new Validation($player1, $player2);
 
