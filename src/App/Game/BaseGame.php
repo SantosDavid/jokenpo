@@ -2,8 +2,6 @@
 
 namespace App\Game;
 
-use App\Options;
-
 trait BaseGame
 {
     private $options;
